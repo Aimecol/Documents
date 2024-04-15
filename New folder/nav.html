@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nav</title>
+    <link rel="stylesheet" href="nav.css" />
+  </head>
+  <body>
+    <section>
+      <header>
+        <nav>
+          <div class="logo">
+            <a href="#">
+              <img src="./Engine 2 no background.png" alt="" />
+            </a>
+          </div>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+          <div class="cart">
+            <a href="#">Cart</a>
+          </div>
+        </nav>
+        <button class="humberg">&#9776;</button>
+        <div class="dropdownNav">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+          <div class="cart">
+            <a href="#">Cart</a>
+          </div>
+        </div>
+      </header>
+    </section>
+    <script>
+      //document.querySelector(".humberg").onclick = () => {
+      //  if (
+      //    document.querySelector(".dropdownNav").classList !=
+      //    "dropdownNav active"
+      //  ) {
+      //    document.querySelector(".dropdownNav").classList.add("active");
+      //  } else {
+      //    document.querySelector(".dropdownNav").classList.remove("active");
+      //  }
+      //};
+
+      document.querySelector(".humberg").addEventListener("click", () => {
+        if (
+          document.querySelector(".dropdownNav").classList !=
+          "dropdownNav active"
+        ) {
+          document.querySelector(".dropdownNav").classList.add("active");
+        } else {
+          document.querySelector(".dropdownNav").classList.remove("active");
+        }
+      });
+    </script>
+  </body>
+</html>

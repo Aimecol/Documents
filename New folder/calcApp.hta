@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        background-color: antiquewhite;
+      }
+
+      .calculator {
+        position: relative;
+        width: 30%;
+        border: 1px solid;
+        height: 30em;
+        margin: 0 auto;
+        top: 3rem;
+        border-radius: 1rem;
+        background-color: transparent;
+        filter: blur(90%);
+      }
+
+      .display {
+        width: 100%;
+      }
+
+      .ans {
+        width: 100%;
+        height: 6.5em;
+        border-radius: 1rem 1rem 0 0;
+        border: 1px solid;
+        text-align: end;
+        padding: 1em;
+        background-color: #cccccc8e;
+        border: none;
+        border-bottom: 1px solid;
+      }
+
+      .numsAndOparators {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0.5em;
+      }
+
+      .body {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      button {
+        width: 20%;
+        height: 4rem;
+        border-radius: 1rem;
+        border: none;
+        background-color: #999;
+        cursor: pointer;
+        font-size: large;
+        font-weight: 700;
+      }
+
+      .equals {
+        width: 45%;
+        font-size: 50px;
+      }
+
+      .dot {
+        font-size: 40px;
+      }
+
+      @media screen and (max-width: 1000px) {
+        .calculator {
+          width: 40%;
+        }
+      }
+
+      @media screen and (max-width: 675px) {
+        .calculator {
+          width: 50%;
+          height: 25.5rem;
+        }
+
+        button {
+          height: 3rem;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        .calculator {
+          width: 80%;
+          height: 28rem;
+        }
+
+        button {
+          height: 3.5rem;
+        }
+      }
+
+      @media screen and (max-width: 300px) {
+        button {
+          width: 22%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" class="ans" />
+      </div>
+      <div class="body">
+        <div class="numsAndOparators">
+          <button
+            onclick="document.querySelector('.ans').value = (eval(document.querySelector('.ans').value)) * (eval(document.querySelector('.ans').value))"
+          >
+            X<sup>2</sup>
+          </button>
+          <button
+            onclick="document.querySelector('.ans').value = (eval(document.querySelector('.ans').value)) / 100"
+          >
+            %
+          </button>
+          <button onclick="document.querySelector('.ans').value = ''">
+            Clear
+          </button>
+          <button onclick="document.querySelector('.ans').value += '/'">
+            /
+          </button>
+        </div>
+        <div class="numsAndOparators">
+          <button onclick="document.querySelector('.ans').value += 7">7</button>
+          <button onclick="document.querySelector('.ans').value += 8">8</button>
+          <button onclick="document.querySelector('.ans').value += 9">9</button>
+          <button onclick="document.querySelector('.ans').value += '*'">
+            X
+          </button>
+        </div>
+        <div class="numsAndOparators">
+          <button onclick="document.querySelector('.ans').value += 4">4</button>
+          <button onclick="document.querySelector('.ans').value += 5">5</button>
+          <button onclick="document.querySelector('.ans').value += 6">6</button>
+          <button onclick="document.querySelector('.ans').value += '-'">
+            -
+          </button>
+        </div>
+        <div class="numsAndOparators">
+          <button onclick="document.querySelector('.ans').value += 1">1</button>
+          <button onclick="document.querySelector('.ans').value += 2">2</button>
+          <button onclick="document.querySelector('.ans').value += 3">3</button>
+          <button onclick="document.querySelector('.ans').value += '+'">
+            +
+          </button>
+        </div>
+        <div class="numsAndOparators">
+          <button
+            onclick="document.querySelector('.ans').value += '.'"
+            class="dot"
+          >
+            .
+          </button>
+          <button onclick="document.querySelector('.ans').value += 0">0</button>
+          <button
+            onclick="document.querySelector('.ans').value = eval(document.querySelector('.ans').value)"
+            class="equals"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
